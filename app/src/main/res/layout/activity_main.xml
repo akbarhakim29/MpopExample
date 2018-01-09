@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bymankind.mpopexample.MainActivity">
+
+    <Button
+        android:id="@+id/btn_connect_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect Bluetooth" />
+
+    <Button
+        android:id="@+id/btn_connect_usb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_connect_bt"
+        android:text="Connect USB" />
+
+    <Button
+        android:id="@+id/btn_open_cashdrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_connect_usb"
+        android:text="Open Cash Drawer" />
+
+    <Button
+        android:id="@+id/btn_print"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_open_cashdrawer"
+        android:text="Print Bill" />
+
+    <Button
+        android:id="@+id/btn_status_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_print"
+        android:text="Status Device" />
+
+</RelativeLayout>
