@@ -1,11 +1,11 @@
 package com.bymankind.mpopexample;
 
-import android.content.Context;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
+
 
 import com.starmicronics.starioextension.StarIoExt;
 
@@ -31,7 +31,11 @@ public class MainActivity extends AppCompatActivity {
         btn_connect_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                DeviceFragment deviceFragment = new DeviceFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_main, deviceFragment)
+                        .addToBackStack(MainActivity.class.getSimpleName())
+                        .commit();
             }
         });
 
@@ -59,7 +63,11 @@ public class MainActivity extends AppCompatActivity {
         btn_status_device.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                DeviceStatusFragment deviceStatusFragment = new DeviceStatusFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.frame_main, deviceStatusFragment)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
     }
